@@ -1,5 +1,10 @@
 ### Timbre Transfer using Nonnegative Matrix Factorization
-**📄**  **Click here to read the full Project Report (PDF)**
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Library](https://img.shields.io/badge/Librosa-Audio_Analysis-orange)
+![Library](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-green)
+
+> **📄 [Click here to read the full Project Report (PDF)](./docs/Gomez_Vitalone2.pdf)**
 
 #### Project Overview
 This project implements an algorithm to transfer the timbre of a specific source audio to a target audio signal, relying solely on signal processing methods [1]. The primary technique explored is **Nonnegative Matrix Factorization (NMF)** to achieve a "quick and dirty" timbre transfer without the use of large and sophisticated neural networks. 
