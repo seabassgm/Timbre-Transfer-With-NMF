@@ -7,7 +7,7 @@
 > **📄 [Click here to read the full Project Report (PDF)](./docs/Gomez_Vitalone2.pdf)**
 
 #### Project Overview
-This project implements an algorithm to transfer the timbre of a specific source audio to a target audio signal, relying solely on signal processing methods [1]. The primary technique explored is **Nonnegative Matrix Factorization (NMF)** to achieve a "quick and dirty" timbre transfer without the use of large and sophisticated neural networks. 
+This project implements an algorithm to transfer the timbre of a specific source audio to a target audio signal, relying solely on signal processing methods. The primary technique explored is **Nonnegative Matrix Factorization (NMF)** to achieve a "quick and dirty" timbre transfer without the use of large and sophisticated neural networks. 
 
 We engineered a custom signal processing pipeline to map the sonic characteristics of noise-like sources onto structured musical targets:
 *   **Sources:** Bees_Buzzing.wav, Wind_Blowing.wav, and Chainsaw_Sawing.wav.
@@ -32,7 +32,7 @@ Because the NMF process discards phase information, we implemented two alternati
 
 #### Key Results
 *   **Reconstruction Quality:** The Griffin-Lim algorithm produced significantly smoother and more natural waveforms compared to the ISTFT method, which suffered from inconsistencies and audible artifacts due to phase/magnitude mismatches.
-*   **Parameter Optimization:** Keeping the template matrix ($W$) fixed proved crucial [8]. If $W$ is not fixed, the NMF adapts too much to the target's original sounds, leading to a much weaker timbre transfer.
+*   **Parameter Optimization:** Keeping the template matrix ($W$) fixed proved crucial. If $W$ is not fixed, the NMF adapts too much to the target's original sounds, leading to a much weaker timbre transfer.
 *   **Timbre Evaluation:** Metric evaluation validated the transfer. The Spectral Centroid of the processed tracks shifted higher (e.g., from 858.5 Hz to 1720.3 Hz), and Spectral Flatness increased, indicating the successful introduction of the source's brighter, noisier textures.
 *   **Structural Preservation:** Despite the distinct change in timbre, the Cosine Similarity between the Mel-Frequency Cepstral Coefficients (MFCCs) of the target and the processed track remained very high (0.9537), confirming that the core rhythmic and spectral identity of the original target song was preserved.
 
